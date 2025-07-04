@@ -18,15 +18,22 @@ AJOUT_BUTTON.addEventListener("click", ajoutCitation)
 //Il faut ajouter un .value pour récupérer la valeur interne de nos input
 //Va savoir mais ça ne veut pas garder nos données bizarrement
 function ajoutCitation(event){
-    let citation = CITATION.value
-    let nomAuteur = NOM_AUTEUR.value
-    // console.log(citation)
-    // console.log(nomAuteur)
-
     event.preventDefault() // Permet d'empecher le rechargement de notre page a chaque fois qu'on appuie sur le bouton
 
-    //on va appeler notre fonction d'apres pour rajouter nos données dans un paragraphe cf.étape 5  
-    addQuote(citation, nomAuteur)
+    //on vérifie bien que l'utilisateur a bien rempli les champs avant de l'ajouter
+    if ( CITATION.value == '' || NOM_AUTEUR.value == ''){ 
+        alert("Il manque des informations pour ajouter votre citation")
+    }
+
+    else{
+        let citation = CITATION.value
+        let nomAuteur = NOM_AUTEUR.value
+        // console.log(citation)
+        // console.log(nomAuteur)
+
+        //on va appeler notre fonction d'apres pour rajouter nos données dans un paragraphe cf.étape 5  
+        addQuote(citation, nomAuteur)
+    }
 }
 
 //on va vraisemblablement l'appeler à la fin de ajoutCitation car c'est la deuxième étape
