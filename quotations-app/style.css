@@ -1,7 +1,60 @@
 body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FFFDD0 ;
+    background-color: #baff3975 ;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+}
+
+#ajoutCitation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 1cm;
+
+}
+
+#ajoutButton,#citation,#nomAuteur{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 1cm;
+}
+
+#ajoutButton:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#quote-list{
+    margin: auto;
+    width: 50%;
+}
+
+.quote{
+    margin: 5px;
+
+    display: block;
+    background-color: white;
+    border-radius: 1cm;
+
+}
+
+#logoAda{
+    width: 100px;
+    float: right;
+    position: absolute;
+    top : 10px;
+    right: 10px;
 }
 
 /* 
