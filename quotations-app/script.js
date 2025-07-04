@@ -5,6 +5,11 @@ const TEXTE_CITATIONS = document.getElementsByClassName("text")
 const AUTHOR_CITATIONS = document.getElementsByClassName("author")
 const QUOTE = document.getElementsByClassName("quote")
 const QUOTE_LIST = document.getElementById("quote-list")
+const COUNT = document.getElementById("count")
+
+let quoteCount = 0
+COUNT.innerText = "Vous n'avez pas encore rentré de citations"
+
 /*--------------------------------------------------------------------------------------------------------------------------------------------*/
 
 AJOUT_BUTTON.addEventListener("click", ajoutCitation)
@@ -17,7 +22,7 @@ function ajoutCitation(event){
     let nomAuteur = NOM_AUTEUR.value
     // console.log(citation)
     // console.log(nomAuteur)
-    
+
     event.preventDefault() // Permet d'empecher le rechargement de notre page a chaque fois qu'on appuie sur le bouton
 
     //on va appeler notre fonction d'apres pour rajouter nos données dans un paragraphe cf.étape 5  
@@ -42,5 +47,8 @@ function addQuote(quote, author){
 
     //On ajoute notre nouvelle balise 'div' dans la 'div' quote-list
     QUOTE_LIST.appendChild(NOUVELLE_DIV)
-
+    
+    //étape 6
+    quoteCount ++
+    COUNT.innerText = `${quoteCount} citations`
 }
