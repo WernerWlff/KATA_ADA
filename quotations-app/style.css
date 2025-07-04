@@ -1,5 +1,35 @@
 body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFDD0 ;
 }
 
+/* 
+#footer{
+    position: absolute;
+    display: inline;
+
+    padding:2%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: #fbf69c;
+}
+
+#logoAda{
+    width: 100px;
+    float: right;
+    position: absolute;
+    bottom : 10px;
+    right: 10px;
+}
+
+#contexte{
+    position : absolute;
+    bottom: 2px;
+    left: 10px;
+    font-size: 15px;
+    align-items: center;
+} 
+*/
