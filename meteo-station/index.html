@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini-Station Météo</title>
+    <script defer type="module" src="script.js"></script>
+    <script defer type="module" src="graphTemp.js"></script>
+    <script defer type="module" src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,11 +18,11 @@
         <h1 id="city">Chargement...</h1>
         <div id="gps"></div>
         <div id="temperature">-°C</div>
-        <div id="detailsPrecipitation">-mm de pluie</div>
-        <div id="detailsHumidity"> -% d'humidité</div>
+        <div class="otherInfosTemperature" id="detailsPrecipitation">-mm de pluie</div>
+        <div class="otherInfosTemperature" id="detailsHumidity"> -% d'humidité</div>
         <div id="details">Mise à jour en cours...</div>
     </div>
 
-    <script src="script.js"></script>
+    <canvas id="graphTemperature" width="960" height="960"></canvas>
 </body>
 </html>

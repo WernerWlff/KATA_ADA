@@ -1,3 +1,5 @@
+import { updateChartWithData } from "./graphTemp.js"
+
 const city = document.getElementById('city')
 const gps = document.getElementById('gps')
 const temperature = document.getElementById('temperature')
@@ -37,6 +39,7 @@ async function fetchCoordinates(whichCity){
         let cityLongitude = answer[0].lon
         gps.innerText = `Coordonnées GPS: ${cityLatitude}, ${cityLongitude}`
         await fetchWeather(cityLatitude, cityLongitude)
+        await updateChartWithData(cityLatitude, cityLongitude)
     }
     catch{
         console.error("Problème de connexion avec l'Api")
@@ -47,7 +50,6 @@ async function fetchWeather(latGiven, lonGiven){
 
     try{
         const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latGiven}&longitude=${lonGiven}&current=temperature_2m,precipitation,relative_humidity_2m`)
-        console.log(`https://api.open-meteo.com/v1/forecast?latitude=${latGiven}&longitude=${lonGiven}&current=temperature_2m,precipitation,relative_humidity_2m`)
         const answer = await response.json()
         
         temperature.innerText = `${answer.current.temperature_2m}°C`
