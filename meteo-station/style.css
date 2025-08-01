@@ -77,6 +77,18 @@ body {
     color: #7f8c8d;
 }
 
+#detailsPrecipitation {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#detailsHumidity {
+    font-size: 25px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
 .loading {
     opacity: 0.5;
     pointer-events: none;
