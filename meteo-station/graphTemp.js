@@ -35,13 +35,13 @@ const config = {
    temperatureGraph = new Chart(graphTemperature, config)
 })
 
-export async function updateChartWithData(latGiven, LonGiven){
+export async function updateChartWithData(latGiven, lonGiven){
 
     let graphData = new Array(15).fill(0)
     let graphHours = new Array(15)
     
     try{
-    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latGiven}&longitude=${LonGiven}&hourly=temperature_2m,precipitation&past_days=2`)
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latGiven}&longitude=${lonGiven}&hourly=temperature_2m,precipitation&past_days=2`)
     const answer = await response.json()
 
     for(let i = 0; i < 15; i++){
